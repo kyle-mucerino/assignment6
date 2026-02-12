@@ -1,0 +1,15 @@
+{
+  "name": "assignment6",
+  "version": "1.0.0",
+  "main": "script.js",
+  "scripts": {
+    "start": "serve -l 3000"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "serve": "^14.2.5"
+  }
+}
