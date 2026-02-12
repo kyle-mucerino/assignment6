@@ -1,0 +1,203 @@
+/* ========================
+   CSS Variables
+======================== */
+
+:root {
+  --bg: #ffffff;
+  --text: #1a1a1a;
+  --accent: #000000;
+  --muted: #717171;
+  --border: #eeeeee;
+}
+
+[data-theme="dark"] {
+  --bg: #121212;
+  --text: #e0e0e0;
+  --accent: #ffffff;
+  --muted: #a0a0a0;
+  --border: #2a2a2a;
+}
+
+/* ========================
+   Base Styles
+======================== */
+
+body {
+  margin: 0;
+  background-color: var(--bg);
+  color: var(--text);
+  font-family: Georgia, serif;
+  line-height: 1.8;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* ========================
+   Progress Bar
+======================== */
+
+#progress-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 3px;
+  width: 0%;
+  background: var(--accent);
+  z-index: 100;
+  transition: width 0.2s ease-out;
+}
+
+/* ========================
+   Layout
+======================== */
+
+.editorial-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* ========================
+   Header / Meta
+======================== */
+
+.top-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 40px 0;
+  font-family: sans-serif;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border-bottom: 1px solid var(--border);
+}
+
+.dot {
+  display: inline-block;
+  width: 4px;
+  height: 4px;
+  margin: 0 10px;
+  background: var(--muted);
+  border-radius: 50%;
+  vertical-align: middle;
+}
+
+/* ========================
+   Typography
+======================== */
+
+h2 {
+  font-size: 3rem;
+  line-height: 1.1;
+  margin: 60px 0 10px;
+}
+
+.subtitle {
+  font-size: 1.4rem;
+  color: var(--muted);
+  margin-bottom: 40px;
+}
+
+.copy p {
+  margin-bottom: 1.5rem;
+}
+
+/* ========================
+   Image
+======================== */
+
+.featured-image img {
+  width: 100%;
+  display: block;
+  border-radius: 2px;
+  filter: grayscale(20%);
+}
+
+figcaption {
+  margin-top: 10px;
+  text-align: right;
+  font-family: sans-serif;
+  font-size: 0.8rem;
+  color: var(--muted);
+}
+
+/* ========================
+   Blockquote
+======================== */
+
+blockquote {
+  margin: 50px 0;
+  padding: 30px 0;
+  font-size: 1.8rem;
+  text-align: center;
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+
+/* ========================
+   Interaction Zone
+======================== */
+
+.interaction-zone {
+  margin: 80px 0;
+  padding: 60px;
+  background: var(--border);
+  text-align: center;
+}
+
+#signup-form {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+input {
+  width: 250px;
+  padding: 10px 15px;
+  border: 1px solid var(--muted);
+  background: var(--bg);
+  color: var(--text);
+}
+
+input:focus {
+  outline: none;
+  border-color: var(--accent);
+}
+
+/* ========================
+   Buttons
+======================== */
+
+button[type="submit"] {
+  padding: 10px 30px;
+  border: none;
+  background: var(--accent);
+  color: var(--bg);
+  cursor: pointer;
+  transition: opacity 0.2s ease;
+}
+
+button[type="submit"]:hover {
+  opacity: 0.85;
+}
+
+/* ========================
+   Theme Toggle
+======================== */
+
+#theme-toggle {
+  background: none;
+  border: none;
+  color: var(--text);
+  cursor: pointer;
+}
+
+#theme-toggle svg {
+  width: 20px;
+}
+
+.hidden {
+  display: none;
+}
